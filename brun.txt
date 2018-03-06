@@ -1,5 +1,5 @@
 XSOCK=/tmp/.X11-unix/X0
-docker build --tag x .   //build command
+docker build --tag x .   //build command using Dockerfile
 docker run -it --privileged -v $XSOCK:$XSOCK  x bash   
 docker run -it --privileged -v $XSOCK:$XSOCK  x firefox   // run firefox
 docker run -it --privileged -v $XSOCK:$XSOCK  x chromium-browser  --no-sandbox    // run chromium
