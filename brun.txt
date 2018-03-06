@@ -1,0 +1,4 @@
+docker build --tag x .
+docker run -it --privileged -v $XSOCK:$XSOCK  x bash
+docker run -it --privileged -v $XSOCK:$XSOCK  x firefox
+docker run -it --privileged -v $XSOCK:$XSOCK  x chromium-browser  --no-sandbox

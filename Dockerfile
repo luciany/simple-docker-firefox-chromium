@@ -1,0 +1,21 @@
+FROM ubuntu:17.10
+
+RUN apt-get update && apt-get clean && apt-get install -y \
+   xterm\
+   chromium-browser\
+   firefox \
+    && apt-get update && apt-get -y dist-upgrade
+
+
+ENV DISPLAY :0
+
+#RUN useradd chr \
+#    && mkdir -p /home/chr \
+#    && chown -v -R chr:chr /home/chr
+
+#COPY init.sh /
+
+#COPY amicontained-linux-amd64 /
+
+#CMD '/init.sh'
+ 
