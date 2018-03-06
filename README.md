@@ -2,7 +2,7 @@
 simple-docker-firefox-chromium
 
 Dockerfile
-+
+:
 brun.txt contains :  
   pre environemnt set ; 
   build command ; 
