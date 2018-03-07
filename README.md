@@ -1,7 +1,8 @@
-# simple-docker-firefox-chromium
-simple-docker-firefox-chromium
+# simple-docker-firefox-chromium/chrome
+simple-docker-firefox-chromium/chrome
 
-Dockerfile;
+Dockerfile - for chromium
+Dockerfile.chrome - for google-chrome-stable
 
 brun.txt contains :  
   pre environemnt set ; 
@@ -9,4 +10,5 @@ brun.txt contains :
   run simple bash ; 
     run firefox ; 
     run chromium ;
+    run chrome
     
