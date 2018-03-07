@@ -8,9 +8,9 @@ Dockerfile.chrome - for google-chrome-stable
 brun.txt contains :  
 
   pre environemnt set ; 
-  build command ; 
   
-    run firefox ; 
-    run chromium ;
-    run chrome
+    build container command ; 
+    run firefox command; 
+    run chromium command;
+    run chrome command;
     
