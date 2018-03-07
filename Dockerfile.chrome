@@ -1,0 +1,26 @@
+FROM ubuntu
+
+RUN apt update && apt clean && apt install -y \
+   xterm\
+   firefox \
+   paxctld \
+   linux-grsec-base \
+   wget \
+    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
+    && apt-get update && apt-get -y install google-chrome-stable\
+    && apt-get update && apt-get -y dist-upgrade
+
+
+ENV DISPLAY :0
+
+RUN useradd chr \
+    && mkdir -p /home/chr/ \
+    && chown -v -R chr:chr /home/chr
+
+COPY amicontained-linux-amd64 /home/chr
+RUN cd /home/chr/ && ./amicontained-linux-amd64 
+
+COPY init.sh / 
+CMD './init.sh'
+
