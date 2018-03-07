@@ -18,8 +18,8 @@ RUN useradd chr \
     && mkdir -p /home/chr/ \
     && chown -v -R chr:chr /home/chr
 
-COPY amicontained-linux-amd64 /home/chr
-RUN cd /home/chr/ && ./amicontained-linux-amd64 
+#COPY amicontained-linux-amd64 /home/chr
+#RUN cd /home/chr/ && ./amicontained-linux-amd64 
 
 COPY init.sh / 
 CMD './init.sh'
