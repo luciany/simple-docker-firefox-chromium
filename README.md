@@ -1,17 +1,11 @@
 # simple-docker-firefox-chromium/chrome
-run you favourite browser firefox/chromium/chrome isolated in a ubuntu docker container
+run you favourite browser firefox/chromium/chrome isolated in a secure ubuntu docker container
 
-repo files:
+XSOCK=/tmp/.X11-unix/X0
 
-Dockerfile - container creation for firefox & chromium
+docker build --tag x .                                              //container build  command 
 
-Dockerfile.chrome - container creation for google-chrome-stable
-
-brun.txt contains :  
-
-    pre environemnt set ; 
-    build container command ; 
-    run firefox command; 
-    run chromium command;
-    run chrome command;
-    
+docker run -it  -d --privileged -v $XSOCK:$XSOCK  x firefox            // run firefox directly
+docker run -it  -d  --privileged -v $XSOCK:$XSOCK  x chromium-browser  // run chromium 
+docker run -it  -d --privileged -v $XSOCK:$XSOCK  x google-chrome      //run  google-chrome 
+        
