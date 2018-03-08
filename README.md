@@ -1,4 +1,4 @@
-# simple-docker-firefox-chromium/chrome
+# simple-docker-firefox-chromium-chrome
 run you favourite browser firefox/chromium/chrome isolated in a secure ubuntu docker container
 
 XSOCK=/tmp/.X11-unix/X0
