@@ -1,4 +1,4 @@
-FROM ubuntu:17.10
+FROM ubuntu
 
 RUN apt-get update && apt-get clean && apt-get install -y \
    xterm\
